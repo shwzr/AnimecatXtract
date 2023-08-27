@@ -35,7 +35,7 @@ Then go to the site animecat.net to find the anime you want like this example<br
 
 **Showzur**
 
-* SRV Discord: [Shynonime](https://discord.gg/UHy8mZsNh8)
+* SRV Discord: [Shynonime](https://discord.gg/B9PrK625xp)
 * Twitter: [@Showzur](https://twitter.com/Showzur)
 * Github: [@shwzr](https://github.com/shwzr)
 
