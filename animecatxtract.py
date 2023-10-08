@@ -60,12 +60,19 @@ def save_episode(url):
         url_text.delete(1.0, tk.END)
         url_text.insert(tk.END, text_to_insert)
 
+def normalize_url(url):
+    for prefix in ["https://neko-sama.fr/", "https://www.neko-sama.fr/", "https://www.animecat.net/"]:
+        if url.startswith(prefix):
+            return url.replace(prefix, "https://animecat.net/")
+    return url
+
 def on_submit():
     global episode_links, stop_search
     episode_links.clear()
     stop_search = False
     url_text.delete(1.0, tk.END)
     url = url_entry.get()
+    url = normalize_url(url)
     if not url.startswith("https://animecat.net/"):
         messagebox.showerror("Erreur", "L'URL doit commencer par 'https://animecat.net/'.")
         return
