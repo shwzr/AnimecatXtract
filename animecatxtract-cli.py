@@ -41,9 +41,8 @@ def save_episode():
     global stop_search
     try:
         url = input("Veuillez entrer l'URL de l'épisode à récupérer : ")
-        if not url.startswith("https://animecat.net/"):
-            print("Veuillez entrer une URL qui commence par 'https://animecat.net/'.")
-            return
+        if url.startswith("https://neko-sama.fr/"):
+            url = url.replace("https://neko-sama.fr/", "https://animecat.net/")
         url = reformat_url(url)
         url_match = re.search(r"https://animecat.net/anime/episode/([0-9]+)-([a-z0-9-]+)-([0-9]+)_(vf|vostfr)", url)
         if url_match:
